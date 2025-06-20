@@ -23,6 +23,7 @@ window/stretch/mode="viewport"
 
 folder_colors={
 "res://assets/": "purple",
+"res://resources/": "pink",
 "res://scenes/": "green",
 "res://scripts/": "yellow"
 }

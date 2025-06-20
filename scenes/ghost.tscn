@@ -1,0 +1,25 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwkas24uyk21g"]
+
+[ext_resource type="Script" uid="uid://kbiksqepaeoa" path="res://scripts/ghost.gd" id="1_bbnym"]
+[ext_resource type="Texture2D" uid="uid://bwh3pnp6rcycn" path="res://assets/Ghost/Ghost_Body_01.png" id="1_l5lq6"]
+[ext_resource type="Texture2D" uid="uid://gcljnvys5tll" path="res://assets/Ghost/Ghost_Eyes_Down.png" id="2_bbnym"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_veat2"]
+radius = 7.0
+height = 16.0
+
+[node name="Ghost" type="Area2D"]
+script = ExtResource("1_bbnym")
+
+[node name="BodySprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_l5lq6")
+
+[node name="EyesSprite" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("2_bbnym")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_veat2")
+
+[node name="NavigationAgent2D" type="NavigationAgent2D" parent="."]
